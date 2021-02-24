@@ -70,6 +70,12 @@ color: #fff;}
 <body>
     <div id="app"></div>
     <!-- JavaScript -->
+    
+
+<script>
+document.getElementById('tip-version').innerText = Docsify.version
+</script>
+    
     <script>
         // Docsify
         window.$docsify = {
@@ -102,7 +108,7 @@ color: #fff;}
             return editHtml
               + html
               + '\n\n----\n\n'
-              + '<p style="color: inherit; font-weight: normal; text-decoration: none; color: #828282;">Last updated <b>{docsify-updated}</b></p>';
+              + '<p style="color: inherit; font-weight: normal; text-decoration: none; color: #828282;">Current version: <span id='tip-version'>loading</span></p>';
            //   + 'Rate this page: ![Rate this page](assets/img/stars.png ':size=10%')'
            //   + '<a href="https://docsify.js.org" target="_blank" style="color: inherit; font-weight: normal;">Powered by docsify</a>'
            //     + '\n\n----\n\n'
@@ -138,7 +144,6 @@ color: #fff;}
     <script src="https://cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/external-script.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
-    <script src="https://unpkg.com/vue-star-rating@next/dist/VueStarRating.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@alertbox/docsify-footer/dist/docsify-footer.min.js"></script>
     <script src="https://unpkg.com/docsify-glossary/dist/docsify-glossary.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
