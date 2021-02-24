@@ -70,15 +70,27 @@ color: #fff;}
 <body>
     <div id="app"></div>
     <!-- JavaScript -->
-    
-    
     <script>
-        
+        if(rhash = sessionStorage.getItem("__redirect_hash__")) {
+      window.location.hash = rhash;
+      sessionStorage.removeItem("__redirect_hash__");
+    }
         // Docsify
         window.$docsify = {
             
+            // NAVIGATION
+            // -----------------------------------------------------------------
+           
+            alias: {
+        '.*?/changelog': 'https://raw.githubusercontent.com/DeanGodfree/docs/main/CHANGELOG.md',
+        '/v06/.*_sidebar.md': 'https://raw.githubusercontent.com/DeanGodfree/docs/0-6-stable/docs/_sidebar.md',
+        '/v1/.*_sidebar.md': 'https://raw.githubusercontent.com/DeanGodfree/docs/1-0-stable/docs/_sidebar.md',
+        '/.*/_sidebar.md': '/_sidebar.md',
+        '/v06/(.*)': 'https://raw.githubusercontent.com/DeanGodfree/docs/0-6-stable/docs/$1',
+        '/v1/': 'README.md',
+        '/v1/(.*)': '$1',
+                    },
             name: '<a id="home-link" class="app-name-link" data-nosearch href="/">Home</a>' +
-       
         '<a id="logo-link" class="app-name-link" data-nosearch href="/"><div class="sidebar-logo">' +
         '<img src="assets/img/favicon-32x32.png" height="32px" class="is-light">' +
         '<img src="assets/img/favicon-32x32.png" height="32px" class="is-dark">' +
@@ -151,18 +163,7 @@ color: #fff;}
 
             
     
-            // NAVIGATION
-            // -----------------------------------------------------------------
-           
-            alias: {
-        '.*?/changelog': 'https://raw.githubusercontent.com/DeanGodfree/docs/main/CHANGELOG.md',
-        '/v06/.*_sidebar.md': 'https://raw.githubusercontent.com/DeanGodfree/docs/0-6-stable/docs/_sidebar.md',
-        '/v1/.*_sidebar.md': 'https://raw.githubusercontent.com/DeanGodfree/docs/1-0-stable/docs/_sidebar.md',
-        '/.*/_sidebar.md': '/_sidebar.md',
-        '/v06/(.*)': 'https://raw.githubusercontent.com/DeanGodfree/docs/0-6-stable/docs/$1',
-        '/v1/': 'README.md',
-        '/v1/(.*)': '$1',
-                    },
+            
             
         
             auto2top   : true,
