@@ -1,4 +1,4 @@
-# Introduction
+# Introduction for 0.6
 
 ## Features
 
