@@ -1,4 +1,4 @@
-# Introduction
+# Introduction for 1.0
 
 ## Features
 
